@@ -34,4 +34,10 @@ $.ajaxPrefilter(function (options) {
 ```
 
 ## 提交login分支
+提交login分支
 `git push -u origin login`
+将login分支合并到主分支，先切换到主分支
+`git checkout master`
+`git merge login`
+提交到云端
+`git push`
