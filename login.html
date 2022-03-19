@@ -6,10 +6,74 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- 引入layui样式表 -->
+  <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+  <!-- 引入login页面样式表 -->
+  <link rel="stylesheet" href="./assets/css/login.css">
+  <!-- 引入字体图标 -->
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
 </head>
 
 <body>
+  <div class="header">
+    <img src="./assets/images/logo.png" alt="大事件" class="logo">
+  </div>
+  <div class="login">
+    <div class="login-forms">
+      <!-- 登录表单 -->
+      <form action="" class="login-register block layui-form" id="login-in">
+        <h1 class="login-title">后台管理系统</h1>
 
+        <!-- 用户名 -->
+        <div class="login-box">
+          <ion-icon name="person" class="login-icon"></ion-icon>
+          <input type="text" name="username" placeholder="用户名" lay-verify="required" autocomplete="off">
+        </div>
+        <!-- 密码 -->
+        <div class="login-box">
+          <ion-icon name="lock" class="login-icon"></ion-icon>
+          <input type="password" name="password" placeholder="密码" lay-verify="required|pwd">
+        </div>
+
+        <button class="layui-btn login-button" lay-submit lay-filter="formDemo">登录</button>
+        <a href="javascript:;" class="login-signin" id="sign-up">去注册账号</a>
+      </form>
+
+      <!-- 注册表单 -->
+      <form action="" class="login-create none layui-form" id="login-up">
+        <h1 class="login-title">后台管理系统</h1>
+
+        <!-- 用户名 -->
+        <div class="login-box">
+          <ion-icon name="person" class="login-icon"></ion-icon>
+          <input type="text" name="username" placeholder="用户名" lay-verify="required" autocomplete="off">
+        </div>
+        <!-- 密码 -->
+        <div class="login-box">
+          <ion-icon name="lock" class="login-icon"></ion-icon>
+          <input type="password" name="password" placeholder="密码" lay-verify="required|pwd">
+        </div>
+        <!-- 确认密码 -->
+        <div class="login-box">
+          <ion-icon name="lock" class="login-icon"></ion-icon>
+          <input type="password" name="repassword" placeholder="确认密码" lay-verify="required|pwd|repwd">
+        </div>
+
+        <button class="layui-btn login-button" lay-submit lay-filter="formDemo">注册</button>
+        <a href="javascript:;" class="login-signup" id="sign-in">去登录</a>
+      </form>
+    </div>
+  </div>
+
+  <!-- 引入layui js 文件 -->
+  <script src="./assets/lib/layui/layui.all.js"></script>
+  <!-- 引入jquery -->
+  <script src="./assets/lib/jquery.js"></script>
+  <!-- 导入自己封装的baseApi.js -->
+  <script src="./assets/js/baseApi.js"></script>
+  <!-- 引入login.js -->
+  <script src="./assets/js/login.js"></script>
 </body>
 
 </html>

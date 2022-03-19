@@ -1,0 +1,156 @@
+/* 设置变量 */
+:root {
+  --main-color: #528fc8;
+  --light-color: #a49eac;
+  --lighten-color: #f2f2f2;
+
+  --h1-font-size: 1.5rem;
+  --normal-font-size: 0.9375rem;
+  --small-font-size: 0.8125rem;
+}
+
+/* 媒体查询，窗口宽度大于等于768px增大字号 */
+@media screen and (min-width: 768px) {
+  :root {
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background: url('../images/login_bg.jpg') no-repeat center;
+  background-size: cover;
+  font-size: var(--normal-font-size);
+  color: #000;
+}
+
+.header {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header .logo {
+  margin: 20px 0;
+}
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-forms {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.login-register,
+.login-create {
+  padding: 2rem 4rem;
+  background-color: var(--lighten-color);
+  justify-self: center;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(35, 0, 77, 0.2);
+  width: 100%;
+  animation: login 0.3s;
+  transition: 0.5s;
+}
+
+@keyframes login {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.login-title {
+  font-size: var(--h1-font-size);
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+  text-align: center;
+}
+
+.login-box {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 0.5rem;
+  padding: 1.125rem 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.login-icon {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+
+.login-box input {
+  outline: none;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  font-size: var(--normal-font-size);
+}
+
+.login-button {
+  display: block;
+  width: 100%;
+  background-color: var(--main-color);
+  border-radius: 0.5rem;
+  height: 3rem;
+  font-weight: 600;
+  font-size: var(--normal-font-size);
+  letter-spacing: 2px;
+}
+
+.login-signin,
+.login-signup {
+  display: block;
+  width: max-content;
+  font-size: var(--small-font-size);
+  color: var(--main-color);
+  margin-left: auto;
+  margin-top: 1rem;
+}
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+/* 响应式 */
+@media screen and (min-width: 576px) {
+  .login-forms {
+    width: 420px;
+    justify-self: center;
+  }
+}
