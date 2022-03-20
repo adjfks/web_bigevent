@@ -41,3 +41,18 @@ $.ajaxPrefilter(function (options) {
 `git merge login`
 提交到云端
 `git push`
+
+## 创建index分支
+`git checkout -b index`
+
+
+## iframe标签
+`<iframe name="fm" src=""></iframe>`
+name用来指定iframe标签的名称
+src用于指定在iframe中显示的文档的url
+
+使用不同<a>链接让iframe显示不同文档
+`<a href="/1.html" target="fm"></a>`
+
+## 登录验证
+每次访问有权限接口时要进行身份认证，通过jquery的$.ajaxPrefilter()和ajax配置对象的complete回调实现。
