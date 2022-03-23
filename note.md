@@ -56,3 +56,47 @@ src用于指定在iframe中显示的文档的url
 
 ## 登录验证
 每次访问有权限接口时要进行身份认证，通过jquery的$.ajaxPrefilter()和ajax配置对象的complete回调实现。
+
+## readonly属性
+>如果在readonly输入元素上指定了属性，则由于用户无法编辑输入，因此该元素不参与约束验证。
+>该readonly属性由text, search, url, tel, email, password, date, month, week, time,datetime-local和number \<input>types 和\<textarea>表单控件元素支持。如果出现在这些输入类型和元素中的任何一个上，则:read-only伪类将匹配。如果不包含该属性，则:read-write伪类将>匹配。
+
+## 隐藏表单域
+不会在页面上显示，但可以用于取值和赋值
+`<input type="hidden" name="id" value="">`
+
+## layui表单取值赋值功能
+具体查看文档
+
+## 在iframe中调用父窗口方法
+`window.parent.getUserInfo()`
+
+## 原生form表单元素的reset方法
+```javascript
+// 调用原生form表单元素的reset方法
+$('.layui-form')[0].reset()
+```
+
+## 文件选择框accept属性
+指定选择文件类型
+```javascript
+<!-- 隐藏的文件选择框 -->
+<input type="file" class="btnChooseImage" accept="image/png,image/jpeg" />
+```
+
+## 创建选择文件对应的URL地址
+```javascript
+// 获取选择的图片
+const file = fileList[0]
+// 创建对应URL地址
+var newImgURL = URL.createObjectURL(file)
+```
+
+## base64格式图片
+优点：不需要发起额外请求获取图片
+缺点：文件体积会比原来大30%左右
+适用于小图片
+
+## 推送新分支到仓库
+第一次推送的分支要加-u参数
+`git push -u origin user`
