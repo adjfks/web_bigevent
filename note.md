@@ -100,3 +100,38 @@ var newImgURL = URL.createObjectURL(file)
 ## 推送新分支到仓库
 第一次推送的分支要加-u参数
 `git push -u origin user`
+
+## 新插件express 0.05
+更改代码后保持在当前页面，浏览器右键按下'f'刷新iframe里的内容
+
+## 在script标签中写html结构
+
+
+## 通过代理形式为弹出层表单绑定submit事件
+绑定在body身上，代理到form表单
+
+## 记得阻止表单默认提交行为
+
+## layui的form.render()方法
+当我们动态渲染一些需要js的表单项时，例如下拉表单，需要在渲染完成后调用该方法才能生效
+```javascript
+// 使用模板引擎渲染数据
+let htmlStr = template('tpl-cate', res)
+$('[name=cate_id]').html(htmlStr)
+// 通知layui重新渲染表单项
+form.render()
+```
+
+## layui分页功能
+jump回调有两种触发方式：
+一是调用laypage.render时
+二是点击切换分页时
+使用jump回调的第二个参数可以判断是哪种触发方式
+
+## 提交FormData注意事项
+```javascript
+data: fd,
+// 注意：如果向服务器提交的是FormData格式数据，必须添加以下两个配置项
+contentType: false,
+processData: false,
+```
